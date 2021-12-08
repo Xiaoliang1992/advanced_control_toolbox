@@ -1,0 +1,14 @@
+function result = f_sys_performance(P, C_loop, C_cmd)
+L = C_loop * P;
+T = L / (1 + L);
+S = 1 - T; 
+Try = T * C_cmd;
+Tdy = P * S;
+result.L = L;
+result.T = T;
+result.S = S;
+result.Try = Try;
+result.Tdy = Tdy;
+result.P = P;
+result.C_loop = C_loop;
+result.C_cmd = C_cmd;
